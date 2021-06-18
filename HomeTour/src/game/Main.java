@@ -21,13 +21,13 @@ public class Main {
 			collectInput();
 			parse(command, player);
 			switch(direction) {
-			case "WEST":
+			case "north":
 				player.setCurrentRoom(player.getCurrentRoom().getExit(direction));
 				printRoom(player);
 				
 			break;
 			
-			case "north": 
+			case "south": 
 				player.setCurrentRoom(player.getCurrentRoom().getExit(direction));
 				printRoom(player);
 				
@@ -39,7 +39,7 @@ public class Main {
 				
 			break;
 			
-			case "south": 
+			case "west": 
 				player.setCurrentRoom(player.getCurrentRoom().getExit(direction));
 				printRoom(player);
 				
