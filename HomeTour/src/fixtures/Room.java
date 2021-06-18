@@ -6,7 +6,7 @@ public class Room extends Fixture {
 	Room[] exits;
 	public Room(String name, String shortDescription, String longDescription) {
 		super(name, shortDescription, longDescription);
-		this.exits = new Room[2]; // size is your choice
+		this.exits = new Room[3]; // size is your choice
 	}
 		
 	public Room[] getExits() {
@@ -19,7 +19,17 @@ public class Room extends Fixture {
 	}
 
 	public Room getExit(String direction) {
-		return exits[0];
+		if(direction.equals("north")) {
+			 return exits[0];
+		} else if (direction.equals("south")) {
+			 return exits[1];
+		} else if (direction.equals("east")) {
+			return exits[2];
+		} else if(direction.equals("west")){
+			 return exits[3];
+		}else {
+			return null;
+		}
 		
 	}
 
@@ -27,6 +37,4 @@ public class Room extends Fixture {
 	public String toString() {
 		return "Room [exits=" + Arrays.toString(exits) + "]";
 	}
-
-	
 }
